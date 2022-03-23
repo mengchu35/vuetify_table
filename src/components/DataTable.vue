@@ -1,23 +1,6 @@
 <template>
 <div>
-  <table id="firstTable">
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Phone</th>
-        <th>Profession</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr v-for="row in rows" :key="row.id">
-        <td>{{row.id}}</td>
-        <td>{{row.name}}</td>
-        <td>{{row.phone}}</td>
-        <td>{{row.profession}}</td>
-      </tr>
-    </tbody>
-  </table>
+  <v-data-table :headers="headers" :items="employees" class="elevation-1"></v-data-table>
 </div>
 </template>
 
@@ -25,7 +8,13 @@
 export default {
   data () {
     return {
-      rows: [
+      headers: [
+        { text: 'ID', value: 'id', align: 'start', sortable: true },
+        { text: 'Name', value: 'name' },
+        { text: 'Phone', value: 'phone', sortable: false },
+        { text: 'Profession', value: 'profession' }
+      ],
+      employees: [
         { id: 1, name: "Chandler Bing", phone: '305-917-1301', profession: 'IT Manager' },
         { id: 2, name: "Ross Geller", phone: '210-684-8953', profession: 'Paleontologist' },
         { id: 3, name: "Rachel Green", phone: '765-338-0312', profession: 'Waitress'},
