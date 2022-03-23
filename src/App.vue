@@ -38,19 +38,22 @@
     </v-app-bar>
 
     <v-main>
-      <HelloWorld/>
+      <InputForm/>
+      <DataTable/>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import InputForm from './components/InputForm.vue'
+import DataTable from './components/DataTable.vue'
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+    InputForm,
+    DataTable
   },
 
   data: () => ({
