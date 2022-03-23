@@ -1,10 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
+    <v-app-bar app color="primary" dark>
       <v-icon class="mr-2">mdi-account-box-multiple</v-icon>
       <span>Employee Data</span>
     </v-app-bar>
